@@ -1,0 +1,37 @@
+{
+  "name": "file-manager",
+  "version": "1.0.0",
+  "description": "nodejs file manager both for server and cloud with encryption facility.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-ts": "tsc",
+    "build": "npm run build-ts && npm run lint",
+    "debug": "npm run build && npm run watch-debug",
+    "serve": "node dist/server.js",
+    "start": "npm run serve",
+    "lint": "tsc --noEmit && eslint \"**/*.{js,ts}\" --quiet --fix",
+    "serve-debug": "nodemon --inspect dist/server.js",
+    "watch-test": "npm run test -- --watchAll",
+    "watch-ts": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajibhossainpavel/file-manager.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rajibhossainpavel/file-manager/issues"
+  },
+  "homepage": "https://github.com/rajibhossainpavel/file-manager#readme",
+  "dependencies": {
+    "rxjs": "^7.5.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.9.1",
+    "@typescript-eslint/parser": "^5.9.1",
+    "eslint": "^8.6.0",
+    "typescript": "^4.5.4"
+  }
+}

@@ -1,37 +1,32 @@
 {
-  "name": "file-manager",
-  "version": "1.0.0",
-  "description": "nodejs file manager both for server and cloud with encryption facility.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build-ts": "tsc",
-    "build": "npm run build-ts && npm run lint",
-    "debug": "npm run build && npm run watch-debug",
-    "serve": "node dist/server.js",
-    "start": "npm run serve",
-    "lint": "tsc --noEmit && eslint \"**/*.{js,ts}\" --quiet --fix",
-    "serve-debug": "nodemon --inspect dist/server.js",
-    "watch-test": "npm run test -- --watchAll",
-    "watch-ts": "tsc -w"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rajibhossainpavel/file-manager.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rajibhossainpavel/file-manager/issues"
-  },
-  "homepage": "https://github.com/rajibhossainpavel/file-manager#readme",
-  "dependencies": {
-    "rxjs": "^7.5.2"
-  },
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.9.1",
-    "@typescript-eslint/parser": "^5.9.1",
-    "eslint": "^8.6.0",
-    "typescript": "^4.5.4"
-  }
+    "name": "file_manager",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "start": "node dist",
+        "dev": "ts-node-dev --respawn --transpile-only --watch src/  src/",
+        "build": "tsc",
+        "test": "jest --no-cache"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "multer": "^1.4.3"
+    },
+    "devDependencies": {
+        "@types/cors": "^2.8.12",
+        "@types/dotenv": "^8.2.0",
+        "@types/express": "^4.17.13",
+        "@types/jest": "^27.0.1",
+        "@types/multer": "^1.4.7",
+        "@types/node": "^16.6.2",
+        "@types/supertest": "^2.0.11",
+        "jest": "^27.0.6",
+        "supertest": "^6.1.6",
+        "ts-jest": "^27.0.5",
+        "ts-node-dev": "^1.1.8",
+        "typescript": "^4.3.5"
+    }
 }
